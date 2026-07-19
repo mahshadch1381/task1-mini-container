@@ -1,4 +1,4 @@
-# Mahshad Container
+# Mini Container
 
 A minimal container runtime written in Go that creates Linux namespace
 isolation using chroot, UTS namespaces, and PID namespaces.
@@ -36,10 +36,9 @@ Or use an existing Alpine/Busybox rootfs.
 Build:
   make build
 
-Run interactive shell:
-  make run
-
 Run a specific command:
+  go mod init mahshad-container
+  make build
   sudo ./mahshad-container --rootfs ./new-root /bin/ls -la /
 
 With custom hostname:
